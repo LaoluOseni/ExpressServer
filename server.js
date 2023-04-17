@@ -52,10 +52,14 @@ const scientists = [
     },
 ]
 
+
+//first middleware
 app.use((req, res, next) => {
     console.log(`${req.method}`)
     next();
 });
+
+//parse json middleware
 app,use(express.json());
 
 app.get('/friends', (req, res) => {
